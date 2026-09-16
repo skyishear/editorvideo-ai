@@ -5,7 +5,7 @@ _Last updated: 16 September 2026_
 Clipping Agent is an open-source command-line tool that runs entirely on the
 user's own computer. This policy describes what data the tool handles and where
 it goes. Everything below can be verified in the source code at
-<https://github.com/metiu1/editorvideo-ai/tree/main/clipping_agent>.
+<https://github.com/skyishear/editorvideo-ai/tree/main/clipping_agent>.
 
 ## 1. Who operates the tool
 
@@ -77,8 +77,8 @@ platforms that have their own age requirements.
 ## 7. Changes
 
 Updates are published in the repository; the current version is
-<https://github.com/metiu1/editorvideo-ai/blob/main/clipping_agent/PRIVACY.md>.
+<https://github.com/skyishear/editorvideo-ai/blob/main/clipping_agent/PRIVACY.md>.
 
 ## 8. Contact
 
-Open an issue at <https://github.com/metiu1/editorvideo-ai/issues>.
+Open an issue at <https://github.com/skyishear/editorvideo-ai/issues>.

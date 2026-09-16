@@ -3,7 +3,7 @@
 _Last updated: 16 September 2026_
 
 Clipping Agent is an open-source command-line tool, part of the
-[editorvideo-ai](https://github.com/metiu1/editorvideo-ai) repository, that runs
+[editorvideo-ai](https://github.com/skyishear/editorvideo-ai) repository, that runs
 on the user's own computer. It cuts short-form video clips from footage the user
 supplies and, on the user's explicit instruction, publishes them to social
 platforms (including TikTok, through the TikTok Content Posting API) using the
@@ -53,9 +53,9 @@ which revokes the token with TikTok and deletes it from your machine.
 ## 6. Changes
 
 These terms may be updated in the repository; the version published at
-<https://github.com/metiu1/editorvideo-ai/blob/main/clipping_agent/TERMS.md>
+<https://github.com/skyishear/editorvideo-ai/blob/main/clipping_agent/TERMS.md>
 is the current one.
 
 ## 7. Contact
 
-Open an issue at <https://github.com/metiu1/editorvideo-ai/issues>.
+Open an issue at <https://github.com/skyishear/editorvideo-ai/issues>.
