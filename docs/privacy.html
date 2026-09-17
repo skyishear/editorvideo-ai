@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Clipping Agent</title>
+<style>
+:root{color-scheme:light dark}
+body{max-width:46rem;margin:2rem auto;padding:0 1.25rem;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+h1{font-size:1.7rem}h2{font-size:1.2rem;margin-top:2rem}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;padding:.05em .3em;border-radius:3px;background:rgba(127,127,127,.15)}
+table{border-collapse:collapse;width:100%;font-size:.95em}th,td{border:1px solid rgba(127,127,127,.4);padding:.4em .6em;vertical-align:top;text-align:left}
+nav{font-size:.9em;margin-bottom:1.5rem}nav a{margin-right:1em}
+</style>
+</head>
+<body>
+<nav><a href="./">Clipping Agent</a><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="https://github.com/skyishear/editorvideo-ai">GitHub</a></nav>
+<h1>Privacy Policy — Clipping Agent</h1>
+<p><em>Last updated: 16 September 2026</em></p>
+<p>Clipping Agent is an open-source command-line tool that runs entirely on the user's own computer. This policy describes what data the tool handles and where it goes. Everything below can be verified in the source code at <a href="https://github.com/skyishear/editorvideo-ai/tree/main/clipping_agent">https://github.com/skyishear/editorvideo-ai/tree/main/clipping_agent</a>.</p>
+<h2>1. Who operates the tool</h2>
+<p>Nobody but you. The authors do not run a hosted service, do not operate servers that the tool talks to, and do not receive any data from your installation. There is no telemetry, no analytics, no crash reporting and no usage tracking of any kind.</p>
+<h2>2. Data the tool handles, and where it is stored</h2>
+<p>All of the following stays on your machine, under directories you control:</p>
+<table><thead><tr><th>Data</th><th>Where</th><th>Why</th></tr></thead><tbody>
+<tr><td>Video and audio files you supply, and the clips cut from them</td><td><code>campaigns/&lt;campaign&gt;/</code> on your disk</td><td>Editing and publishing</td></tr>
+<tr><td>Campaign brief and rules you point the tool at</td><td><code>campaigns/&lt;campaign&gt;/campaign_spec.json</code></td><td>Deciding how to cut and caption clips</td></tr>
+<tr><td>Processing state and event log (step status, post IDs, public URLs of posts you made, timestamps)</td><td><code>campaigns/&lt;campaign&gt;/agent/state.json</code> and <code>agent/events.jsonl</code></td><td>Resuming after an interruption and verifying results</td></tr>
+<tr><td>TikTok authorization data obtained via TikTok Login Kit: access token, refresh token, expiry times, your TikTok <code>open_id</code>, display name and the scopes you granted</td><td><code>~/.clipping_agent/tokens/tiktok/&lt;account&gt;.json</code>, readable only by your user account</td><td>Publishing to your TikTok account on your instruction and renewing the token without asking you to log in every day</td></tr>
+<tr><td>Optional Chromium browser profile, if you configure <code>browser.profile_dir</code></td><td>The directory you choose</td><td>Keeping you logged in to campaign websites you submit to</td></tr>
+</tbody></table>
+<p>Secrets (tokens, API keys, client secrets) are never written to log files: the logger redacts them.</p>
+<h2>3. Data sent to third parties</h2>
+<p>The tool sends data only to the platforms you explicitly connect and only when you run a publishing or authorization command:</p>
+<ul>
+<li><strong>TikTok</strong> (<code>open.tiktokapis.com</code>, <code>www.tiktok.com</code>): during authorization, the OAuth request with your app's client key; during publishing, the video file, its caption/title and privacy setting, and requests to read the status and public URL of the posts it created. Scopes used: <code>user.info.basic</code> (to identify which account a token belongs to), <code>video.publish</code>, <code>video.list</code>.</li>
+<li><strong>YouTube</strong> and <strong>Instagram</strong> (Google / Meta APIs), if you configure them: the video file and its metadata, with tokens you provide.</li>
+<li><strong>Campaign websites</strong> you point the tool at (for example Content Rewards): reading the campaign page and, on your instruction, submitting the public URL of a post you made.</li>
+</ul>
+<p>Nothing is shared with anyone else. The tool contains no advertising, no third-party SDKs and no cookies of its own.</p>
+<h2>4. TikTok data specifically</h2>
+<p>Through TikTok Login Kit the tool receives your <code>open_id</code>, display name, the tokens described above and the list of scopes you granted. It uses them solely to publish videos you ask it to publish and to read back the status and share URL of those videos. It does not read your other videos, followers, messages or any other TikTok data, and it does not store TikTok data anywhere except the local token file described in section 2.</p>
+<h2>5. Retention and deletion</h2>
+<p>Data stays on your disk until you delete it. To remove TikTok data:</p>
+<ul>
+<li>run <code>clipping-agent auth tiktok --revoke</code> (revokes the token with TikTok and deletes the local token file), or delete <code>~/.clipping_agent/tokens/tiktok/</code> yourself; and/or</li>
+<li>revoke the app on TikTok under <em>Settings → Security → Manage app permissions</em>.</li>
+</ul>
+<p>Campaign folders and logs can be deleted like any other files.</p>
+<h2>6. Children</h2>
+<p>The tool is not directed at children and requires accounts on third-party platforms that have their own age requirements.</p>
+<h2>7. Changes</h2>
+<p>Updates are published in the repository; the current version is <a href="https://github.com/skyishear/editorvideo-ai/blob/main/clipping_agent/PRIVACY.md">https://github.com/skyishear/editorvideo-ai/blob/main/clipping_agent/PRIVACY.md</a>.</p>
+<h2>8. Contact</h2>
+<p>Open an issue at <a href="https://github.com/skyishear/editorvideo-ai/issues">https://github.com/skyishear/editorvideo-ai/issues</a>.</p>
+</body>
+</html>

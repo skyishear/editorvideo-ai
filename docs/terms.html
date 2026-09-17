@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service — Clipping Agent</title>
+<style>
+:root{color-scheme:light dark}
+body{max-width:46rem;margin:2rem auto;padding:0 1.25rem;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+h1{font-size:1.7rem}h2{font-size:1.2rem;margin-top:2rem}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;padding:.05em .3em;border-radius:3px;background:rgba(127,127,127,.15)}
+table{border-collapse:collapse;width:100%;font-size:.95em}th,td{border:1px solid rgba(127,127,127,.4);padding:.4em .6em;vertical-align:top;text-align:left}
+nav{font-size:.9em;margin-bottom:1.5rem}nav a{margin-right:1em}
+</style>
+</head>
+<body>
+<nav><a href="./">Clipping Agent</a><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a><a href="https://github.com/skyishear/editorvideo-ai">GitHub</a></nav>
+<h1>Terms of Service — Clipping Agent</h1>
+<p><em>Last updated: 16 September 2026</em></p>
+<p>Clipping Agent is an open-source command-line tool, part of the <a href="https://github.com/skyishear/editorvideo-ai">editorvideo-ai</a> repository, that runs on the user's own computer. It cuts short-form video clips from footage the user supplies and, on the user's explicit instruction, publishes them to social platforms (including TikTok, through the TikTok Content Posting API) using the user's own accounts.</p>
+<h2>1. License</h2>
+<p>The software is released under the MIT License (see the repository <code>LICENSE</code> file). It is provided "as is", without warranty of any kind. The authors are not liable for any damage arising from its use.</p>
+<h2>2. Self-hosted operation</h2>
+<p>There is no hosted service. Every part of the tool — video processing, authorization with social platforms, publishing — runs locally on the machine where the user installs it. The authors do not operate servers for this tool and never receive the user's videos, tokens or account data.</p>
+<h2>3. User responsibilities</h2>
+<p>By using the tool you agree that:</p>
+<ul>
+<li>you own, or have the right to use and publish, all footage and audio you give to the tool;</li>
+<li>content you publish through the tool complies with the terms and community guidelines of the platform you publish to (for TikTok: the TikTok Terms of Service and Community Guidelines) and with any campaign rules you take part in;</li>
+<li>you are responsible for the accounts you connect and for every post the tool makes on your instruction;</li>
+<li>you will not use the tool for spam, for posting the same content across multiple accounts, or for any unlawful purpose.</li>
+</ul>
+<h2>4. Platform APIs</h2>
+<p>The tool calls the official APIs of third-party platforms (TikTok, YouTube, Instagram) with credentials that you obtain and authorize yourself. Your use of those APIs is governed by the respective platform's developer and user terms. Platform features may change or be withdrawn by the platform at any time.</p>
+<h2>5. Revoking access</h2>
+<p>You can stop the tool from accessing a platform account at any time by revoking the authorization on the platform (for TikTok: <em>Settings → Security → Manage app permissions</em>) or by running <code>clipping-agent auth tiktok --revoke</code>, which revokes the token with TikTok and deletes it from your machine.</p>
+<h2>6. Changes</h2>
+<p>These terms may be updated in the repository; the version published at <a href="https://github.com/skyishear/editorvideo-ai/blob/main/clipping_agent/TERMS.md">https://github.com/skyishear/editorvideo-ai/blob/main/clipping_agent/TERMS.md</a> is the current one.</p>
+<h2>7. Contact</h2>
+<p>Open an issue at <a href="https://github.com/skyishear/editorvideo-ai/issues">https://github.com/skyishear/editorvideo-ai/issues</a>.</p>
+</body>
+</html>
